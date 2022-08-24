@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import Button from "@mui/material/Button";
 
-import { ButtonControlProps, NameProps } from "./type";
+import { ButtonControlProps, NameProps } from "components/TodoItem/type";
 
 export const Item = styled.li`
   background-color: #fff;
@@ -17,11 +17,11 @@ export const Name = styled.span<NameProps>`
   font-weight: 600;
 
   color: ${({ priority }) => priority && "#66a9ff"};
-  text-decoration: ${({ done, priority }) => (done && priority ? `line-through rgba(0, 0, 0, 0.9)` : "none" && done ? "line-through" : "none")};
+  text-decoration: ${({ done, priority }) =>
+    done && priority ? `line-through rgba(0, 0, 0, 0.9)` : "none" && done ? "line-through" : "none"};
   opacity: ${({ done }) => done && `0.5`};
 `;
 
 export const ButtonControl = styled(Button)<ButtonControlProps>`
-  color: ${({ color }) => color};
   opacity: ${({ done }) => done && `0.5`};
 `;

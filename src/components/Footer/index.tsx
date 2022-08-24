@@ -1,31 +1,31 @@
 import { useState } from "react";
 
 import Button from "@mui/material/Button";
-import Input from "../Input";
 
-import { guid } from "../../helpers/guid";
+import Input from "components/Input";
 
-import { IStuff } from "../../mock/type";
-import { IProps } from "./type";
+import { guid } from "helpers/guid";
 
-import { Form } from "./styles";
+import { IProps } from "components/Footer/type";
+import { IStuff } from "mock/type";
+
+import { Form } from "components/Footer/styles";
 
 const Footer = ({ setTodoList }: IProps) => {
   const initialValue: IStuff = {
     id: guid(),
     name: "",
     isPriority: false,
-    isDone: false,
     status: "active",
   };
 
   const [name, setName] = useState("");
 
-  const handleChange = (event: { target: any }) => {
+  const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setName(event.target.value);
   };
 
-  const handleAdd = (event: { target: any; preventDefault: () => void }) => {
+  const handleAdd = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     const newItem = {
@@ -33,14 +33,23 @@ const Footer = ({ setTodoList }: IProps) => {
       name,
     };
 
-    setTodoList((prevState) => [newItem, ...prevState]);
+    setTodoList((prevState) => [...prevState, newItem]);
 
     setName("");
   };
 
   return (
     <Form onSubmit={handleAdd}>
-      <Input label="Add a new item" required={true} autoComplete="off" name={name} onChange={handleChange} />
+      <Input
+        variant="standard"
+        label="Add a new item"
+        required
+        autoComplete="off"
+        value={name}
+        onChange={handleNameChange}
+        maxWidth={280}
+        name="add item"
+      />
       <Button variant="outlined" type="submit">
         Add
       </Button>

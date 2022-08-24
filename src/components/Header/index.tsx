@@ -1,6 +1,6 @@
-import { IProps } from "./type";
+import { IProps } from "components/Header/type";
 
-import { Counter, Intro, Title } from "./styles";
+import { Counter, Intro, Title } from "components/Header/styles";
 
 const Header = ({ leftQuantity, done }: IProps) => {
   return (

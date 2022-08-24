@@ -4,5 +4,4 @@ import styled from "styled-components";
 
 export const InputField = styled(TextField)`
   width: 100%;
-  max-width: 280px;
 `;

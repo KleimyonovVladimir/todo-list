@@ -1,19 +1,9 @@
-import { InputField } from "./styles";
-import { IProps } from "./type";
+import { IProps } from "components/Input/type";
 
-const Input = ({ label, required, autoComplete, onChange, name }: IProps) => {
-  return (
-    <InputField
-      id="standard-basic"
-      label={label}
-      variant="standard"
-      className="input"
-      required={required}
-      autoComplete={autoComplete}
-      onChange={onChange}
-      value={name}
-    />
-  );
+import { InputField } from "components/Input/styles";
+
+const Input = (props: IProps) => {
+  return <InputField style={{ maxWidth: props.maxWidth }} {...props} />;
 };
 
 export default Input;

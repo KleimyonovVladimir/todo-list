@@ -3,5 +3,4 @@ export interface IStuff {
   name: string;
   isPriority: boolean;
   status: "active" | "done";
-  isDone: boolean;
 }

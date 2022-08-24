@@ -1,7 +1,5 @@
-export interface IProps {
-  label: string;
-  required?: boolean;
-  autoComplete: string;
-  onChange?: (event: { target: any }) => void;
-  name?: string;
-}
+import { TextFieldProps } from "@mui/material";
+
+export type IProps = TextFieldProps & {
+  maxWidth?: number;
+};

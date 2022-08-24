@@ -1,5 +1,5 @@
-import { guid } from "../helpers/guid";
-import { IStuff } from "./type";
+import { guid } from "helpers/guid";
+import { IStuff } from "mock/type";
 
 export const stuff: IStuff[] = [
   {
@@ -7,20 +7,17 @@ export const stuff: IStuff[] = [
     name: "Drink coffee",
     status: "done",
     isPriority: false,
-    isDone: true,
   },
   {
     id: guid(),
     name: "Do exercise",
     status: "active",
     isPriority: true,
-    isDone: false,
   },
   {
     id: guid(),
     name: "Create app",
     status: "active",
     isPriority: false,
-    isDone: false,
   },
 ];
