@@ -2,7 +2,8 @@
 
 This application was created for the development and improvement of the author's skill
 
-![todo-list](https://user-images.githubusercontent.com/79158730/187043616-9979b3a2-8591-4b5e-9e8a-7982a4be0246.png)
+![todo-list](https://user-images.githubusercontent.com/79158730/187043728-d591b171-96a1-49f2-a74f-8503b2c7086b.png)
+
 
 
 ### Getting Started
